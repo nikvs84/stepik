@@ -1,0 +1,22 @@
+12
+A
+X
+G : F
+F : D
+E : D
+D : B C
+B : A
+C : A
+Y : A X
+W : V
+V : Y Z
+Z : X
+8
+A G
+A Z
+A W
+X W
+X QWE
+A X
+X X
+1 1
