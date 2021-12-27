@@ -212,12 +212,26 @@ class HuffmanTree:
         return root
 
 
-s = input()
+# s = input()
 
-h_tree = HuffmanTree.from_source(s)
-print(len(h_tree.code_table.keys()), len(h_tree.encoded))
-print('\n'.join([str(x[0]) + ": " + x[1] for x in h_tree.code_table.items()]))
-print(h_tree.encoded)
+# h_tree = HuffmanTree.from_source(s)
+# print(len(h_tree.code_table.keys()), len(h_tree.encoded))
+# print('\n'.join([str(x[0]) + ": " + x[1] for x in h_tree.code_table.items()]))
+# print(h_tree.encoded)
 
-decoding_tree = HuffmanTree.from_code_table_and_encoded(h_tree.code_table, h_tree.encoded)
-print(decoding_tree.source)
+# decoding_tree = HuffmanTree.from_code_table_and_encoded(h_tree.code_table, h_tree.encoded)
+# print(decoding_tree.source)
+
+k, l = map(int, input().split())
+
+code_table = dict()
+for i in range(k):
+    letter, code = input().split(': ')
+    code_table[letter] = code
+
+# print(code_table)
+
+encoded = input()
+
+huffman_tree = HuffmanTree.from_code_table_and_encoded(code_table, encoded)
+print(huffman_tree.source)
